@@ -5,7 +5,7 @@ import _ from "lodash"
 import App from "./app"
 import routes from "routers"
 import store from "./store"
-
+import "./asset/less/common.less";
 
 window._ = _;
 

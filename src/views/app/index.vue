@@ -3,11 +3,17 @@
     <div class="">
       <router-view></router-view>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Footer from "components/Footer"
+
 export default {
+  components: {
+    Footer
+  },
   data(){
     return{}
   },
