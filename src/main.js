@@ -1,9 +1,11 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
+import "asset/js/flexible.js"
 import _ from "lodash"
 import App from "./app"
 import routes from "routers"
 import store from "./store"
+
 
 window._ = _;
 

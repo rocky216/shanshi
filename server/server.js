@@ -7,11 +7,13 @@ var webpackConfig = require("../webpack.config")
 var config = require("../config/index")
 var app = express()
 var compiler = webpack(webpackConfig)
+var  proxy = require('http-proxy-middleware');
 
 // import App from "./app"
 var App = require("./app")
 
-console.log(App);
+//反向代理
+app.use(proxy('/Mobile/Api', {target: 'http://www.jxjasggs.com'}))
 
 //设置静态资源
 const staticPath=path.join(__dirname, "../dist")

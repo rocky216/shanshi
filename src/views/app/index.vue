@@ -1,8 +1,5 @@
 <template lang="html">
   <div class="">
-    <div class="color">
-      222222311
-    </div>
     <div class="">
       <router-view></router-view>
     </div>
