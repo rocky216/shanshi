@@ -1,7 +1,11 @@
 <template lang="html">
   <div class="">
     <div class="">
-      <router-view></router-view>
+      <transition :name="moveName" mode="out-in">
+
+          <router-view></router-view>
+
+      </transition>
     </div>
     <Footer></Footer>
   </div>
@@ -15,7 +19,17 @@ export default {
     Footer
   },
   data(){
-    return{}
+    return{
+      moveName: 'move-left'
+    }
+  },
+  watch: {
+    // '$route' (to, from) {
+    //   const toDepth = to.path.split('/').length
+    //   const fromDepth = from.path.split('/').length
+    //   this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    //   console.log(this.transitionName);
+    // }
   },
   created(){
 
@@ -27,7 +41,24 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.color {
-  color: red;
+.move-left-enter {
+    transform: translate(100%);
+}
+.move-left-enter-active {
+    transition: all 0.1s ease;
+}
+.move-left-leave-active {
+    transform: translate(-100%);
+    transition: all  0.1s ease;
+}
+.move-right-enter {
+    transform: translate(-100%);
+}
+.move-right-enter-active {
+    transition: all 0.1s ease;
+}
+.move-right-leave-active {
+    transform: translate(100%);
+    transition: all  0.1s ease;
 }
 </style>

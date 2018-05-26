@@ -1,6 +1,19 @@
 <template lang="html">
 <div class="home">
-  <Search v-model="value"></Search>
+  <!-- <Search v-model="value"></Search> -->
+  <div class="top">
+    <div class="top_item">
+      <i class="fa fa-street-view"></i>
+      <span>吉安</span>
+    </div>
+    <div class="top_item">
+      <router-link to="/search">
+        <div class="searchBox">
+          <i class="fa fa-search"></i>
+        </div>
+      </router-link>
+    </div>
+  </div>
   <div class="swipe" >
     <Swipe :auto="5000">
       <SwipeItem>
@@ -20,6 +33,18 @@
       <li>综合排序</li>
       <li>销量最高</li>
       <li>距离最近</li>
+    </ul>
+  </div>
+  <div class="footList">
+    <ul>
+      <li>
+        <div class="">
+
+        </div>
+        <div class="">
+
+        </div>
+      </li>
     </ul>
   </div>
 </div>
@@ -45,7 +70,42 @@ export default {
 <style lang="less" scoped>
 @import "../../asset/less/common.less";
 
+.top{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top:0;
+  z-index: 10;
+  background: @whiteColor;
+  display: flex;
+  .top_item:nth-child(1) {
+    flex: 1;
+    padding-left: 0.2rem;
+    i {
+      font-size: @size16;
+    }
+
+  }
+  .top_item:nth-child(2) {
+    padding: 0.2rem;
+    flex: 3;
+  }
+  .searchBox {
+    border: 1px solid @grayColor;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 0.4rem;
+    i {
+      font-size: @size16;
+      float: left;
+      margin-top: 0.2rem;
+      margin-left: 0.2rem;
+    }
+  }
+}
+
 .swipe {
+  margin-top: 1.2rem;
   width: 100%;
   height: 3rem;
   .SwipeItem {
