@@ -30,7 +30,7 @@
   </div>
   <div class="footScreen">
     <ul>
-      <li>综合排序</li>
+      <li @click="test">综合排序</li>
       <li>销量最高</li>
       <li>距离最近</li>
     </ul>
@@ -52,6 +52,9 @@
 
 <script>
 import {Search,Swipe,SwipeItem} from "mint-ui"
+// import {fetch} from "utils"
+import axios from "axios"
+import qs from "qs"
 
 export default {
   components: {
@@ -63,6 +66,33 @@ export default {
     return {
       value: ''
     }
+  },
+
+  methods: {
+    test(){
+      var data1={
+        Keywords: 'qqw',
+        pageIndex: 1,
+        OrderBy: 100
+      }
+      axios({
+        url: '/api/CustomerModule/Company/GetShopList',
+        method: 'post',
+        data: qs.stringify(data1)
+      })
+      // const options = {
+      //   url: "/CustomerModule/Company/GetShopList",
+      //   metod: 'post',
+      //   data: {
+      //     Keywords: '21'
+      //   }
+      //
+      // }
+      //
+      // fetch(options,()=>{
+      //
+      // })
+    }
   }
 }
 </script>
@@ -73,6 +103,7 @@ export default {
 .top{
   position: fixed;
   width: 100%;
+  height: 0.9rem;
   left: 0;
   top:0;
   z-index: 10;
@@ -81,31 +112,32 @@ export default {
   .top_item:nth-child(1) {
     flex: 1;
     padding-left: 0.2rem;
+    line-height: 0.7rem;
     i {
       font-size: @size16;
     }
 
   }
   .top_item:nth-child(2) {
-    padding: 0.2rem;
+    padding: 0.1rem;
     flex: 3;
   }
   .searchBox {
     border: 1px solid @grayColor;
-    height: 0.8rem;
+    height: 0.6rem;
     line-height: 0.8rem;
     border-radius: 0.4rem;
     i {
       font-size: @size16;
       float: left;
-      margin-top: 0.2rem;
+      margin-top: 0.08rem;
       margin-left: 0.2rem;
     }
   }
 }
 
 .swipe {
-  margin-top: 1.2rem;
+  margin-top: 0.8rem;
   width: 100%;
   height: 3rem;
   .SwipeItem {
@@ -130,7 +162,12 @@ export default {
   }
 
 }
+.footList {
+  li {
+    display: flex;
 
+  }
+}
 
 
 </style>

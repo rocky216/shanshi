@@ -13,7 +13,8 @@ var  proxy = require('http-proxy-middleware');
 var App = require("./app")
 
 //反向代理
-app.use(proxy('/Mobile/Api', {target: 'http://www.jxjasggs.com'}))
+// app.use(proxy('/CustomerModule/Company', {target: 'http://wap.pushans.com'}))
+// app.use(proxy('/Mobile/Api', {target: 'http://www.jxjasggs.com'}))
 
 //设置静态资源
 const staticPath=path.join(__dirname, "../dist")
@@ -40,7 +41,7 @@ if (isDev) {
 
 
 
-
+app.use('/api', require('./routers/index'))
 
 app.get("*", (req, res)=>{
   res.render('index', {})
