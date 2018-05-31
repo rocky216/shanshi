@@ -30,19 +30,113 @@
   </div>
   <div class="footScreen">
     <ul>
-      <li @click="test">综合排序</li>
+      <li>综合排序</li>
       <li>销量最高</li>
+
+
       <li>距离最近</li>
     </ul>
   </div>
   <div class="footList">
     <ul>
       <li>
-        <div class="">
-
+        <div class="foot_item">
+          <div class="img">
+            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>谱膳司健康厨房</p>
+            <div class="info">
+              <div class="start">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+              <p>销量10109份</p>
+            </div>
+          </div>
         </div>
-        <div class="">
-
+        <div class="foot_item">
+          <div class="">
+            <i class="fa fa-volume-control-phone"></i>
+          </div>
+          <p>660m</p>
+        </div>
+      </li>
+      <li>
+        <div class="foot_item">
+          <div class="img">
+            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>谱膳司健康厨房</p>
+            <div class="info">
+              <div class="start">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+              <p>销量10109份</p>
+            </div>
+          </div>
+        </div>
+        <div class="foot_item">
+          <div class="">
+            <i class="fa fa-volume-control-phone"></i>
+          </div>
+          <p>660m</p>
+        </div>
+      </li>
+      <li>
+        <div class="foot_item">
+          <div class="img">
+            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>谱膳司健康厨房</p>
+            <div class="info">
+              <div class="start">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+              <p>销量10109份</p>
+            </div>
+          </div>
+        </div>
+        <div class="foot_item">
+          <div class="">
+            <i class="fa fa-volume-control-phone"></i>
+          </div>
+          <p>660m</p>
+        </div>
+      </li>
+      <li>
+        <div class="foot_item">
+          <div class="img">
+            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>谱膳司健康厨房</p>
+            <div class="info">
+              <div class="start">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+              <p>销量10109份</p>
+            </div>
+          </div>
+        </div>
+        <div class="foot_item">
+          <div class="">
+            <i class="fa fa-volume-control-phone"></i>
+          </div>
+          <p>660m</p>
         </div>
       </li>
     </ul>
@@ -52,9 +146,6 @@
 
 <script>
 import {Search,Swipe,SwipeItem} from "mint-ui"
-// import {fetch} from "utils"
-import axios from "axios"
-import qs from "qs"
 
 export default {
   components: {
@@ -66,34 +157,9 @@ export default {
     return {
       value: ''
     }
-  },
-
-  methods: {
-    test(){
-      var data1={
-        Keywords: 'qqw',
-        pageIndex: 1,
-        OrderBy: 100
-      }
-      axios({
-        url: '/api/CustomerModule/Company/GetShopList',
-        method: 'post',
-        data: qs.stringify(data1)
-      })
-      // const options = {
-      //   url: "/CustomerModule/Company/GetShopList",
-      //   metod: 'post',
-      //   data: {
-      //     Keywords: '21'
-      //   }
-      //
-      // }
-      //
-      // fetch(options,()=>{
-      //
-      // })
-    }
   }
+
+
 }
 </script>
 
@@ -103,7 +169,7 @@ export default {
 .top{
   position: fixed;
   width: 100%;
-  height: 0.9rem;
+  height: 1rem;
   left: 0;
   top:0;
   z-index: 10;
@@ -112,7 +178,7 @@ export default {
   .top_item:nth-child(1) {
     flex: 1;
     padding-left: 0.2rem;
-    line-height: 0.7rem;
+    margin-top:0.3rem;
     i {
       font-size: @size16;
     }
@@ -124,13 +190,13 @@ export default {
   }
   .searchBox {
     border: 1px solid @grayColor;
-    height: 0.6rem;
+    height: 0.72rem;
     line-height: 0.8rem;
     border-radius: 0.4rem;
     i {
       font-size: @size16;
       float: left;
-      margin-top: 0.08rem;
+      margin-top: 0.2rem;
       margin-left: 0.2rem;
     }
   }
@@ -163,9 +229,47 @@ export default {
 
 }
 .footList {
+  background-color: @whiteColor;
+  border-top: 1px solid @grayColor;
   li {
+    height: 1.8rem;
     display: flex;
-
+    padding: 0.2rem;
+    border-bottom: 1px solid @grayColor;
+    .foot_item:nth-child(1) {
+      flex: 3;
+      .img {
+        width: 1.4rem;
+        height: 1.4rem;
+        float: left;
+        margin-right: 0.3rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .info {
+        display: flex;
+        margin-top:0.3rem;
+        .start {
+          margin-right: 0.2rem;
+          i {
+            color: @redDeep;
+          }
+        }
+      }
+    }
+    .foot_item:nth-child(2){
+      flex: 1;
+      text-align: right;
+      i{
+        color: @redDeep;
+        margin-top: 0.2rem;
+      }
+      p {
+        margin-top: 0.3rem;
+      }
+    }
   }
 }
 
