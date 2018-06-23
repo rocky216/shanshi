@@ -14,7 +14,7 @@ var App = require("./app")
 
 //反向代理
 // app.use(proxy('/CustomerModule/Company', {target: 'http://wap.pushans.com'}))
-// app.use(proxy('/Mobile/Api', {target: 'http://www.jxjasggs.com'}))
+app.use(proxy('/jxps', {target: 'http://120.78.87.189/'}))
 
 //设置静态资源
 const staticPath=path.join(__dirname, "../dist")

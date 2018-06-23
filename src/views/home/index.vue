@@ -3,8 +3,10 @@
   <!-- <Search v-model="value"></Search> -->
   <div class="top">
     <div class="top_item">
-      <i class="fa fa-street-view"></i>
-      <span>吉安</span>
+      <div class="">
+        <i class="fa fa-street-view"></i>
+        <span>吉安</span>
+      </div>
     </div>
     <div class="top_item">
       <router-link to="/search">
@@ -32,8 +34,6 @@
     <ul>
       <li>综合排序</li>
       <li>销量最高</li>
-
-
       <li>距离最近</li>
     </ul>
   </div>
@@ -146,6 +146,7 @@
 
 <script>
 import {Search,Swipe,SwipeItem} from "mint-ui"
+import {fetch} from "utils"
 
 export default {
   components: {
@@ -157,8 +158,20 @@ export default {
     return {
       value: ''
     }
-  }
+  },
+  created(){
+    this.testData()
+  },
+  methods: {
+    testData(){
+      const options={
+        url: "/jxps/values/get",
+      }
+      fetch(options, ()=>{
 
+      })
+    }
+  }
 
 }
 </script>
@@ -178,7 +191,7 @@ export default {
   .top_item:nth-child(1) {
     flex: 1;
     padding-left: 0.2rem;
-    margin-top:0.3rem;
+    line-height: 0.8rem;
     i {
       font-size: @size16;
     }

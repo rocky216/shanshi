@@ -2,6 +2,7 @@ import App from "views/app"
 import Home from "views/home"
 import Search from "views/search"
 import List from "views/list"
+import Shop from "views/shop"
 
 
 export default [
@@ -13,6 +14,10 @@ export default [
       {
         path: '/home',
         component: Home
+      },
+      {
+        path: '/shop',
+        component: Shop
       },
       {
         path: '/search',
