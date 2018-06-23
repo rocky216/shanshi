@@ -3,6 +3,7 @@ import Home from "views/home"
 import Search from "views/search"
 import List from "views/list"
 
+
 export default [
   {
     path: '/',
