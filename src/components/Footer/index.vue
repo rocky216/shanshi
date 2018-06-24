@@ -7,12 +7,16 @@
     </router-link>
   </div>
   <div class="footer_item">
-    <i class="fa fa-square"></i>
-    <p>点餐帮助</p>
+    <router-link to="/help">
+      <i class="fa fa-square"></i>
+      <p>点餐帮助</p>
+    </router-link>
   </div>
   <div class="footer_item">
-    <i class="fa fa-reorder"></i>
-    <p>我的订单</p>
+    <router-link to="/order">
+      <i class="fa fa-reorder"></i>
+      <p>我的订单</p>
+    </router-link>
   </div>
   <div class="footer_item">
     <i class="fa fa-user-o"></i>

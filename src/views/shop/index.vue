@@ -25,14 +25,70 @@
       <li>销量 <i class="fa fa-sort"></i> </li>
     </ul>
   </div>
-  <div class="">
-
+  <div class="list">
+    <div class="left">
+      <ul>
+        <li>全部</li>
+        <li>家庭宴客餐</li>
+        <li>凉菜</li>
+        <li>蒸菜</li>
+        <li>蒸鱼</li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <div class="rightImg">
+            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+          </div>
+          <div class="rightText">
+            <h2>高级定制营养套餐F</h2>
+            <div class="select">
+              <Badge size="small" type="primary">选厨师</Badge>
+              <Badge size="small" type="primary">选厨师</Badge>
+              <Badge size="small" type="primary">选厨师</Badge>
+            </div>
+            <div class="sales">
+              <span>销量77份</span>
+              <span>仅剩13份</span>
+            </div>
+            <div class="price">
+              <span class="redColor">￥25元</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="rightImg">
+            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+          </div>
+          <div class="rightText">
+            <h2>高级定制营养套餐F</h2>
+            <div class="select">
+              <Badge size="small" type="primary">选厨师</Badge>
+              <Badge size="small" type="primary">选厨师</Badge>
+              <Badge size="small" type="primary">选厨师</Badge>
+            </div>
+            <div class="sales">
+              <span>销量77份</span>
+              <span>仅剩13份</span>
+            </div>
+            <div class="price">
+              <span class="redColor">￥25元</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
+import {Badge } from "mint-ui"
 export default {
+  components: {
+    Badge
+  },
   data(){
     return {
 
@@ -76,6 +132,9 @@ export default {
       .myeval {
         float: right;
         font-size: 0.45rem;
+        a {
+          color: @greenColor;
+        }
       }
     }
   }
@@ -83,6 +142,7 @@ export default {
 .nav {
   background: @whiteColor;
   border-top: 1px solid @grayddd;
+  border-bottom: 1px solid @grayeee;
   ul{
     width: 100%;
     display: flex;
@@ -94,5 +154,53 @@ export default {
     }
   }
 }
-
+.list {
+  background-color: @whiteColor;
+  display: flex;
+  .left {
+    width: 2.5rem;
+    background-color: @grayf1;
+    ul {
+      li {
+        border-bottom: 1px solid @grayddd;
+        padding: 0.2rem;
+        text-align: center;
+      }
+    }
+  }
+  .right {
+    width: 7.5rem;
+    ul {
+      li{
+        display: flex;
+        padding: 0.2rem;
+        box-sizing: border-box;
+        border-bottom: 1px solid @grayddd;
+        .rightImg {
+          width: 1.5rem;
+          height: 1.5rem;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .rightText {
+          padding: 0 0.2rem;
+          .select {
+            margin-top: 0.15rem;
+            span {
+              color: @whiteColor;
+            }
+          }
+          .sales {
+            color: @gray999;
+          }
+          .price {
+            font-size: 0.45rem;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

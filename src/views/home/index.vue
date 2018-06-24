@@ -39,31 +39,33 @@
   </div>
   <div class="footList">
     <ul>
-      <li>
-        <div class="foot_item">
-          <div class="img">
-            <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
-          </div>
-          <div class="text">
-            <p>谱膳司健康厨房</p>
-            <div class="info">
-              <div class="start">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half"></i>
+      <router-link to="/shop">
+        <li>
+          <div class="foot_item">
+            <div class="img">
+              <img src="http://wap.pushans.com/UploadFiles/ADImage/c5e9c4c4-c320-464f-a973-2754598f676c.jpg" alt="">
+            </div>
+            <div class="text">
+              <p>谱膳司健康厨房</p>
+              <div class="info">
+                <div class="start">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <p>销量10109份</p>
               </div>
-              <p>销量10109份</p>
             </div>
           </div>
-        </div>
-        <div class="foot_item">
-          <div class="">
-            <i class="fa fa-volume-control-phone"></i>
+          <div class="foot_item">
+            <div class="">
+              <i class="fa fa-volume-control-phone"></i>
+            </div>
+            <p>660m</p>
           </div>
-          <p>660m</p>
-        </div>
-      </li>
+        </li>
+      </router-link>
       <li>
         <div class="foot_item">
           <div class="img">
@@ -160,7 +162,7 @@ export default {
     }
   },
   created(){
-    this.testData()
+    // this.testData()
   },
   methods: {
     testData(){
@@ -192,6 +194,7 @@ export default {
     flex: 1;
     padding-left: 0.2rem;
     line-height: 0.8rem;
+    font-size: 0.45rem;
     i {
       font-size: @size16;
     }
