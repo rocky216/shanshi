@@ -212,7 +212,7 @@ export default {
     i {
       font-size: @size16;
       float: left;
-      margin-top: 0.2rem;
+      margin-top: 0.15rem;
       margin-left: 0.2rem;
     }
   }
@@ -240,6 +240,7 @@ export default {
     li{
       flex: 1;
       text-align: center;
+      line-height: 0.6rem;
     }
   }
 
@@ -248,15 +249,15 @@ export default {
   background-color: @whiteColor;
   border-top: 1px solid @grayColor;
   li {
-    height: 1.8rem;
+    height: 2.2rem;
     display: flex;
     padding: 0.2rem;
     border-bottom: 1px solid @grayColor;
     .foot_item:nth-child(1) {
       flex: 3;
       .img {
-        width: 1.4rem;
-        height: 1.4rem;
+        width: 1.8rem;
+        height: 1.8rem;
         float: left;
         margin-right: 0.3rem;
         img {

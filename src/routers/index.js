@@ -5,6 +5,7 @@ import List from "views/list"
 import Shop from "views/shop"
 import Order from "views/order"
 import Help from "views/help"
+import Users from "views/users"
 
 
 export default [
@@ -28,6 +29,10 @@ export default [
       {
         path: '/help',
         component: Help
+      },
+      {
+        path: '/users',
+        component: Users
       },
       {
         path: '/search',
